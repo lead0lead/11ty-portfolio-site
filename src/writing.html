@@ -1,0 +1,8 @@
+---
+layout: layouts/base.njk
+title: "writing"
+---
+
+{% for article in collections.articles %}
+    {% include "article-card.njk" %}
+{% endfor %}

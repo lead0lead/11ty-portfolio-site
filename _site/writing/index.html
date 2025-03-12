@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block head %}
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title>writing</title>
     <link rel="stylesheet" href="/css/styles.css" />
-    {% endblock %}
+    
 </head>
 <body>
     <div id="navbar">
-        {% block navbar %}
+        
         <div class="navbar__content">
             <a href="#" class="navbar__button">work</a>
             <a href="/about" class="navbar__button">about me</a>
             <a href="/resume" class="navbar__button">resume</a>
             <a href="/writing" class="navbar__button">writing</a>
         </div>
-        {% endblock %}
+        
     </div>
     <div id="content">
-        {% block content%}
-        {{content | safe}}
-        {% endblock %}
+        
+        
+
+    <div class="article-card">
+    <h3>Test Article #1</h3>
+    <p>Description of test article 1</p>
+</div>
+
+    <div class="article-card">
+    <h3>Test Article #2</h3>
+    <p>Description of test article 2</p>
+</div>
+
+        
     </div>
     <div id="footer">
-        {% block footer%}
+        
 
-        {% endblock %}
+        
     </div>
 </body>
 </html>
