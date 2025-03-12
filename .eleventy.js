@@ -1,4 +1,9 @@
-module.exports = function(eleventyConfig){
+module.exports = async function(eleventyConfig){
+    const eleventyPluginVite = (await import("@11ty/eleventy-plugin-vite"))
+    eleventyConfig.addPlugin(eleventyPluginVite.default, {
+        tempFolderName: ".11ty-vite",
+    });
+
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/css/");
     eleventyConfig.addPassthroughCopy("src/scripts/");
