@@ -50,7 +50,7 @@ body{
 #blur{
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: -1;
     backdrop-filter: blur(250px);
 }
@@ -91,6 +91,7 @@ body{
 
 #content{
     font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
     padding-top: 16rem;
 }
 
@@ -109,6 +110,10 @@ body{
     align-items: center;
     justify-content: flex-start;
     gap: 0.5rem
+}
+
+.content__content{
+    gap: 8rem;
 }
 
 .titlecard{
@@ -165,4 +170,19 @@ body{
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.card__content{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--buttonNeutralBackgroundColor);
+    border: 0.1rem solid var(--buttonNeutralBorderColor);
+    border-radius: 2rem;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.card__text{
+    display: flex;
+    flex-direction: column;
 }
