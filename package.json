@@ -1,0 +1,17 @@
+{
+  "name": "11ty-portfolio-site",
+  "version": "1.0.0",
+  "description": "personal portfolio/blog website build using 11ty",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
