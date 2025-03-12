@@ -12,6 +12,49 @@ html{
     color: var(--textColor)
 }
 
+body{
+    margin: 0;
+}
+@keyframes rotate{
+    from{
+        rotate: 0deg;
+    }
+
+    50%{
+        scale: 1 1.5;
+    }
+
+    to{
+        rotate: 360deg;
+    }
+}
+
+#cursor_blob{
+    opacity: 100%;
+    background: linear-gradient(
+        to bottom right,
+        gold,
+        mediumslateblue
+    );
+    height: 50rem;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    animation: rotate 20s infinite;
+    z-index: -2;
+}
+
+#blur{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    backdrop-filter: blur(250px);
+}
+
 #navbar{
     position: fixed;
     top: 0rem;
@@ -47,8 +90,8 @@ html{
 }
 
 #content{
-    margin-top: 16rem;
     font-family: Arial, Helvetica, sans-serif;
+    padding-top: 16rem;
 }
 
 .vbox{
@@ -69,6 +112,7 @@ html{
 }
 
 .titlecard{
+    min-width: 60%;
     padding: 2rem;
     border-radius: 2rem;
     background-color: var(--buttonNeutralBackgroundColor);
