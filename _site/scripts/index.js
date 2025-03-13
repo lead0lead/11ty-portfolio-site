@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const cursor_blob = document.getElementById("cursor_blob");
 const canvas = document.querySelector('#bg');
+const canvasContainer = document.querySelector('.titlecard__image')
 
 document.body.onpointermove = event => {
     const {clientX, clientY} = event;
@@ -16,13 +17,14 @@ document.body.onpointermove = event => {
 if (canvas) {
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera( 75, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
 
     const renderer = new THREE.WebGLRenderer({
         canvas: document.querySelector('#bg'),
+        alpha: true,
     });
     renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( canvasContainer.clientWidth, canvasContainer.clientHeight );
     camera.position.setZ(30);
 
     const geometry = new THREE.TorusGeometry( 10, 3, 16, 100);
@@ -44,7 +46,16 @@ if (canvas) {
 
     const controls = new OrbitControls(camera, renderer.domElement);
 
+    const reziseObserver = new ResizeObserver(() => {
+        renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
+        camera.aspect = canvasContainer.clientWidth / canvasContainer.clientHeight;
+        camera.updateProjectionMatrix();
+    })
+
+    reziseObserver.observe(canvasContainer);
+
     function animate(){
+
         requestAnimationFrame( animate );
         torus.rotation.x += 0.01;
         torus.rotation.y += 0.005;

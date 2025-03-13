@@ -17,6 +17,12 @@ body{
 }
 
 canvas{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.threejs-test{
     position: fixed;
     top: 0;
     left: 0;
@@ -44,7 +50,7 @@ canvas{
         gold,
         mediumslateblue
     );
-    height: 50rem;
+    height: 25rem;
     aspect-ratio: 1;
     position: fixed;
     left: 50%;
@@ -125,7 +131,7 @@ canvas{
 }
 
 .titlecard{
-    min-width: 60%;
+    width: 60%;
     padding: 2rem;
     border-radius: 2rem;
     background-color: var(--buttonNeutralBackgroundColor);
@@ -133,6 +139,7 @@ canvas{
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    justify-content: space-between;
 }
 
 .titlecard__text{
@@ -141,8 +148,8 @@ canvas{
 
 .titlecard__image{
     width: 50%;
+    aspect-ratio: 1;
     min-height: 20rem;
-    background-color: red;
 }
 
 .button{
