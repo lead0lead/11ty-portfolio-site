@@ -5,11 +5,35 @@
     --buttonNeutralBorderColor: #949494;
     --textColor: #FFFFFF;
     --backgroundColor: #1E1E1E;
+
+    --clr-dark-a0: #000000;
+    --clr-light-a0: #ffffff;
+
+    --clr-primary-a0: #5d24e9;
+    --clr-primary-a10: #7640ec;
+    --clr-primary-a20: #8c58f0;
+    --clr-primary-a30: #9f70f3;
+    --clr-primary-a40: #b187f6;
+    --clr-primary-a50: #c29ff8;
+
+    --clr-surface-a0: #121212;
+    --clr-surface-a10: #282828;
+    --clr-surface-a20: #3f3f3f;
+    --clr-surface-a30: #575757;
+    --clr-surface-a40: #717171;
+    --clr-surface-a50: #8b8b8b;
+
+    --clr-surface-tonal-a0: #1c1624;
+    --clr-surface-tonal-a10: #312b39;
+    --clr-surface-tonal-a20: #47424e;
+    --clr-surface-tonal-a30: #5f5a65;
+    --clr-surface-tonal-a40: #78737d;
+    --clr-surface-tonal-a50: #918d96;
 }
 
 html{
-    background-color: var(--backgroundColor);
-    color: var(--textColor)
+    background-color: var(--clr-surface-a0);
+    color: var(--clr-light-a0)
 }
 
 body{
@@ -48,7 +72,7 @@ canvas{
     background: linear-gradient(
         to bottom right,
         gold,
-        mediumslateblue
+        var(--clr-primary-a0) 
     );
     height: 25rem;
     aspect-ratio: 1;
@@ -86,21 +110,21 @@ canvas{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 0.1rem solid var(--buttonNeutralBorderColor);
+/*  border: 0.1rem solid var(--clr-surface-a50); */
     border-radius: 2rem;
-    background-color: var(--buttonNeutralBackgroundColor);
+    background-color: var(--clr-surface-a10);
     padding: 0.5rem 1rem;
 }
 
 .navbar__button{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color: var(--buttonNeutralBorderColor);
+    color: var(--clr-primary-a50);
     padding: 0.25rem 1rem;
 }
 
 .navbar__button:hover{
-    color: var(--textColor);
+    color: var(--clr-light-a0);
 }
 
 #content{
@@ -134,8 +158,8 @@ canvas{
     width: 60%;
     padding: 2rem;
     border-radius: 2rem;
-    background-color: var(--buttonNeutralBackgroundColor);
-    border: 0.1rem solid var(--buttonNeutralBorderColor) ;
+    background-color: var(--clr-surface-a10);
+    /* border: 0.1rem solid var(--clr-surface-a50); */
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -154,8 +178,8 @@ canvas{
 
 .button{
     padding: 0.25rem 1rem;
-    border: 0.1rem solid var(--buttonNeutralBorderColor);
-    background-color: var(--buttonNeutralBackgroundColor);
+    /*border: 0.1rem solid var(--clr-surface-a50);*/
+    background-color: var(--clr-surface-a20);
     color: var(--textColor);
     border-radius: 2rem;
     text-decoration: none;
@@ -178,8 +202,8 @@ canvas{
     background: linear-gradient(
         to right,
         gold,
-        mediumslateblue,
-        mediumslateblue,
+        var(--clr-primary-a20),
+        var(--clr-primary-a20),
         gold
     );
     background-size: 200%;
@@ -190,8 +214,8 @@ canvas{
 .card__content{
     display: flex;
     flex-direction: row;
-    background-color: var(--buttonNeutralBackgroundColor);
-    border: 0.1rem solid var(--buttonNeutralBorderColor);
+    background-color: var(--clr-surface-a20);
+    /*border: 0.1rem solid var(--clr-surface-a50);*/
     border-radius: 2rem;
     padding: 2rem;
     gap: 2rem;
